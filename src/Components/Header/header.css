@@ -1,0 +1,11 @@
+.header_container {
+  width: 600px;
+  position: absolute;
+  background: #e3f2fd;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+}
