@@ -1,7 +1,13 @@
+
+
 .App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 1400px;
+  height: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
+  margin: auto;
+  
 }
 /* 
 .App-logo {

@@ -1,14 +1,16 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import './App.css'
 
-import Header from 'Components/Header/header.js';
+import Left from './Components/Left/left.js'
+import Right from './Components/Right/right.js'
 
 function App() {
-  return (
-    <div className="App">
-     <Header />
-    </div>
-  );
+   return (
+      <div className="App">
+         <Left />
+         <Right />
+      </div>
+   );
 }
 
 export default App;
