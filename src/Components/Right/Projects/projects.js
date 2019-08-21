@@ -36,7 +36,6 @@ let IndividualProject = (props) => {
             {props.liveSite ? 
                <a target="_blank" 
                   href={props.liveSite} 
-                  
                > 
                   <img className="outside_link" src={newWindowIcon}></img> 
                </a> 
@@ -50,7 +49,7 @@ let IndividualProject = (props) => {
                className="image_small"
                src={props.imageSmall} 
                alt="Temporary tiny placeholder image"
-               />
+            />
             <a href={props.liveSite} target="_blank">
                <img
                   style={largeLoaded ? {} : { display: 'none' }}
@@ -58,7 +57,7 @@ let IndividualProject = (props) => {
                   src={props.imageLarge}
                   alt="Full resolution project image"
                   onLoad={() => setLargeLoaded(true)}
-                  />
+               />
             </a>
          </div>
          <div className="bottom_container">
@@ -72,7 +71,7 @@ let IndividualProject = (props) => {
 
 let Projects = (props) => {
    return (
-      <div>
+      <div className="projects_container">
          <IndividualProject
             title="Beer Style Guide"
             description="Terse React mapping a single JSON object. 
@@ -85,7 +84,8 @@ let Projects = (props) => {
          <IndividualProject 
             title="Secret Unity Things"
             description="Why my public github projects are relatively old.
-               Original C# scripting and and Unity engine development."
+               This private repo holds original C# scripting and Unity 
+               engine development."
             imageLarge={unityGame}
             imageSmall={unityGameSmall}
             

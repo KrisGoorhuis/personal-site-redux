@@ -5,3 +5,24 @@
 
 //credits: 
 //Denis Klyuchnikov, RU   - open new window icon
+// steve losh (http://stevelosh.com/)
+// brian atiyeh (https://www.brianatiyeh.com/)
+
+// website things:
+// photoship
+// react
+// barbones?
+
+
+import React from 'react'
+
+let More = () => {
+   return (
+      <div>
+         More!
+
+      </div>
+   )
+}
+
+export default More
