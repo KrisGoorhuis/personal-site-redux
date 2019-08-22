@@ -19,50 +19,71 @@ import newWindowIcon from 'Assets/Images/open-link-white.png'
 
 let IndividualProject = (props) => {
    const [largeLoaded, setLargeLoaded] = useState(false)
+   const [page, setPage] = useState(1);
+
+   
    
    return (
-      <div className="individual_project_container">
-         <div className="links_container">
-            {props.githubLink ? 
-               <a target="_blank" 
-                  href={props.githubLink} 
-                  
-               > 
-                  <img className="github_link" src={githubMark}></img> 
-               </a> 
-               :
-               <div>--</div>
-            }
-            {props.liveSite ? 
-               <a target="_blank" 
-                  href={props.liveSite} 
-               > 
-                  <img className="outside_link" src={newWindowIcon}></img> 
-               </a> 
-               :
-               <div></div>
-            }
+      <div>
+         <div className="carousel_controls">
+            <div 
+               className="carousel_button" 
+               onClick={() => setPage(-1)}>
+               
+            </div>
+            <div 
+               className="carousel_button" 
+               onClick={() => setPage(1)}>
+               -->
+            </div>
          </div>
-         <div className="project_images">
-            <img alt=""
-               style={largeLoaded ? {display: 'none'} : {}}
-               className="image_small"
-               src={props.imageSmall} 
-               alt="Temporary tiny placeholder image"
-            />
-            <a href={props.liveSite} target="_blank">
-               <img
-                  style={largeLoaded ? {} : { display: 'none' }}
-                  className="image_large"
-                  src={props.imageLarge}
-                  alt="Full resolution project image"
-                  onLoad={() => setLargeLoaded(true)}
+         <div className="individual_project_container">
+            <div className="links_container">
+               {props.githubLink ? 
+                  <a target="_blank" rel="noopener noreferrer" 
+                     href={props.githubLink} 
+                     
+                  > 
+                     <img 
+                        className="github_link" 
+                        src={githubMark} 
+                        alt="github 'mark' logo"
+                     />
+                  </a> 
+                  :
+                  <div>--</div>
+               }
+               {props.liveSite ? 
+                  <a target="_blank" rel="noopener noreferrer"
+                     href={props.liveSite} 
+                  > 
+                     <img className="outside_link" src={newWindowIcon}></img> 
+                  </a> 
+                  :
+                  <div></div>
+               }
+            </div>
+            <div className="project_images">
+               <img 
+                  style={largeLoaded ? {display: 'none'} : {}}
+                  className="image_small"
+                  src={props.imageSmall} 
+                  alt="Temporary tiny placeholder image"
                />
-            </a>
-         </div>
-         <div className="bottom_container">
-            <h2 className="project_title">{props.title}</h2>
-            <p className="project_description">{props.description}</p>
+               <a href={props.liveSite} target="_blank" rel="noopener noreferrer">
+                  <img
+                     style={largeLoaded ? {} : { display: 'none' }}
+                     className="image_large"
+                     src={props.imageLarge}
+                     alt="Full resolution project shot"
+                     onLoad={() => setLargeLoaded(true)}
+                  />
+               </a>
+            </div>
+            <div className="bottom_container">
+               <h2 className="project_title">{props.title}</h2>
+               <p className="project_description">{props.description}</p>
+            </div>
          </div>
       </div>
    )

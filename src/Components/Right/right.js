@@ -9,7 +9,7 @@ let Right = () => {
 
    return (
       <div className="right_container">
-         <ImagePopup image={image} />
+         {/* <ImagePopup image={image} /> */}
          <Projects setPopupImage={setImage} />
       </div>
    )

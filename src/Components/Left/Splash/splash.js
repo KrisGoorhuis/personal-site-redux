@@ -12,22 +12,26 @@ let Splash = () => {
          <div className="top_container">
             <div className="portrait_container">
                <img
-                  style={largeLoaded ? { display: 'none'} : {} }
+                  style={largeLoaded ? { display: 'none' } : {}}
                   src={portrait}
                   alt="portrait"
+                  onLoad={() => { setLargeLoaded(true) }}
                />
-               <img 
+               <img
                   style={largeLoaded ? {} : { display: 'none' }}
                   src={portraitSmall}
                   alt="portrait"
                />
             </div>
+            <div className="intro_container">
+               <p>Hey there,</p>
+               <p>I’m Kris G.</p>
+            </div>
 
          </div>
-         <p>Hey there, I’m <span className="colored_text">Kris G.</span></p>
          <p>
             I’m a programmer, snowboarder,
-            hobbyist photographer & incognito(ish) nerd
+            hobbyist photographer & incognito nerd
             living out of the pacific northwest.
          </p>
          <p>I’d love to <a href="mailto:krisgoorhuis@gmail.com">hear from you.</a></p>

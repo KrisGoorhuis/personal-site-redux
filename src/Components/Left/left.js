@@ -8,30 +8,43 @@ import More from 'Components/Left/About/about.js'
 let Left = () => {
    const [page, setPage] = useState(1);
 
+   let handlePageSet = (change) => {
+      let nextPage = page;
+      nextPage += change;
+      if (nextPage >= 4) {
+         nextPage = 1
+      }
+      if (nextPage <= 0) {
+         nextPage = 3
+      }
+      setPage(nextPage)
+   }
+
    return (
       <div className="left_container">
          <div className="carousel_controls">
             <div 
                className="carousel_button" 
-               onClick={() => setPage(page - 1)}>
+               onClick={() => handlePageSet(-1)}>
                
             </div>
             <div 
                className="carousel_button" 
-               onClick={() => setPage(page + 1)}>
-               -->
+               onClick={() => handlePageSet(1)}>
+               
             </div>
          </div>
-         {
-            page == 1 ? <Splash /> : <React.Fragment></React.Fragment>
-         }
-         {
-            page == 2 ? <About /> : <React.Fragment></React.Fragment>
-         }
-         {
-            page == 3 ? <More /> : <React.Fragment></React.Fragment>
-         }
-
+         <div className="page_container">
+            {
+               page === 1 ? <Splash /> : <React.Fragment></React.Fragment>
+            }
+            {
+               page === 2 ? <About /> : <React.Fragment></React.Fragment>
+            }
+            {
+               page === 3 ? <More /> : <React.Fragment></React.Fragment>
+            }
+         </div>
       </div>
    )
 }
