@@ -19,13 +19,13 @@ import newWindowIcon from 'Assets/Images/open-link-white.png'
 
 let IndividualProject = (props) => {
    const [largeLoaded, setLargeLoaded] = useState(false)
-   const [page, setPage] = useState(1);
+   // const [page, setPage] = useState(1);
 
    
    
    return (
-      <div>
-         <div className="carousel_controls">
+      <React.Fragment>
+         {/* <div className="carousel_controls">
             <div 
                className="carousel_button" 
                onClick={() => setPage(-1)}>
@@ -36,7 +36,7 @@ let IndividualProject = (props) => {
                onClick={() => setPage(1)}>
                -->
             </div>
-         </div>
+         </div> */}
          <div className="individual_project_container">
             <div className="links_container">
                {props.githubLink ? 
@@ -57,7 +57,11 @@ let IndividualProject = (props) => {
                   <a target="_blank" rel="noopener noreferrer"
                      href={props.liveSite} 
                   > 
-                     <img className="outside_link" src={newWindowIcon}></img> 
+                     <img 
+                        className="outside_link" 
+                        src={newWindowIcon} 
+                        alt="outside link"
+                     />
                   </a> 
                   :
                   <div></div>
@@ -68,7 +72,7 @@ let IndividualProject = (props) => {
                   style={largeLoaded ? {display: 'none'} : {}}
                   className="image_small"
                   src={props.imageSmall} 
-                  alt="Temporary tiny placeholder image"
+                  alt="Temporary tiny placeholder"
                />
                <a href={props.liveSite} target="_blank" rel="noopener noreferrer">
                   <img
@@ -85,7 +89,7 @@ let IndividualProject = (props) => {
                <p className="project_description">{props.description}</p>
             </div>
          </div>
-      </div>
+      </React.Fragment>
    )
 }
 

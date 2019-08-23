@@ -2,6 +2,7 @@
 // freecodecamp
 // The Coding Train https://www.youtube.com/channel/UCvjgXvBlbQiydffZU7m1_aw
 // Do something with Unity. Hobby stuff!
+// "Imagine if this had started with a good mock?"
 
 //credits: 
 //Denis Klyuchnikov, RU   - open new window icon
@@ -12,6 +13,10 @@
 // photoship
 // react
 // barbones?
+
+// Here's the rub:
+// I'm not great at visual design. I love working from a mock.
+// Or in this case, from other people's designs, credited here.
 
 
 import React from 'react'
