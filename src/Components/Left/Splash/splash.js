@@ -31,7 +31,7 @@ let Splash = () => {
          </div>
          <p>
             I’m a programmer, snowboarder,
-            hobbyist photographer & incognito nerd
+            hobbyist photographer & decent cook
             living out of the pacific northwest.
          </p>
          <p>I’d love to

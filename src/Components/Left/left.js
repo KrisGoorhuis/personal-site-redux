@@ -20,6 +20,14 @@ let Left = () => {
       setPage(nextPage)
    }
 
+   let buttonText = {
+      0: "More",
+      1: "Home",
+      2: "About",
+      3: "More",
+      4: "Home"
+   }
+
    return (
       <div className="left_container">
          
@@ -37,13 +45,17 @@ let Left = () => {
          <div className="carousel_controls">
             <div 
                className="carousel_button" 
-               onClick={() => handlePageSet(-1)}>
-               
+               onClick={() => handlePageSet(-1)}
+            >
+               ⮜ {
+                     page
+                  }
             </div>
             <div 
                className="carousel_button" 
-               onClick={() => handlePageSet(1)}>
-               
+               onClick={() => handlePageSet(1)}
+            >
+               {buttonText[page + 1]} ⮞
             </div>
          </div>
       </div>
