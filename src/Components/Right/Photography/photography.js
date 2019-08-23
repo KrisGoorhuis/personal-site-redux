@@ -1,18 +1,6 @@
 import React, { useState } from 'react'
 import './photography.css'
 
-import rainSmall from 'Assets/Images/Photos/rain-small.jpg'
-import lithiaSmall from 'Assets/Images/Photos/lithia-small.jpg'
-import bearSmall from 'Assets/Images/Photos/bear-small.jpg'
-import beerSmall from 'Assets/Images/Photos/beer-small.jpg'
-import cheeseSmall from 'Assets/Images/Photos/cheese-small.jpg'
-import currySmall from 'Assets/Images/Photos/curry-small.jpg'
-import greenSmall from 'Assets/Images/Photos/green-small.jpg'
-import orangeSmall from 'Assets/Images/Photos/orange-small.jpg'
-import porkSmall from 'Assets/Images/Photos/pork-small.jpg'
-import snowSmall from 'Assets/Images/Photos/snow-small.jpg'
-import iceSmall from 'Assets/Images/Photos/ice-small.jpg'
-
 import rain from 'Assets/Images/Photos/rain.jpg'
 import lithia from 'Assets/Images/Photos/lithia.jpg'
 import bear from 'Assets/Images/Photos/bear.jpg'
