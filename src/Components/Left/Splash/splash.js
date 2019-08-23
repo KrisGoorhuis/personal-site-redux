@@ -34,7 +34,12 @@ let Splash = () => {
             hobbyist photographer & incognito nerd
             living out of the pacific northwest.
          </p>
-         <p>I’d love to <a href="mailto:krisgoorhuis@gmail.com">hear from you.</a></p>
+         <p>I’d love to
+            <a 
+               className="bluetext" 
+               href="mailto:krisgoorhuis@gmail.com">
+               &nbsp; hear from you.
+            </a></p>
       </div>
    )
 }

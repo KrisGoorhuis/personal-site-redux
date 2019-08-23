@@ -1,5 +1,7 @@
 .splash_container {
    max-width: 100%;
+   font-size: 1em;
+   /* overflow-wrap:  */
 }
 
 .portrait_container {
@@ -28,7 +30,7 @@
    font-size: 40px;
 }
 
-a {
+.bluetext {
    text-decoration: none;
-   color: var(--accent-red);
+   color: #caefff;
 }

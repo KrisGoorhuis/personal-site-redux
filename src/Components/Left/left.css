@@ -5,7 +5,10 @@
    justify-content: center;
    align-items: center;
    position: fixed;
-   max-width: 700px;
+   width: 600px;
+   padding-left: 30px;
+   font-size: 28px;
+
 }
 
 .carousel_controls {
@@ -26,6 +29,15 @@
 }
 
 .page_container {
-   height: 800px;
-   font-size: 30px; 
+   height: 500px;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
+
+@media only screen and (max-width: 1230px) {
+   .left_container {
+      width: 500px;
+   }
+ }

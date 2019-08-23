@@ -22,6 +22,18 @@ let Left = () => {
 
    return (
       <div className="left_container">
+         
+         <div className="page_container">
+            {
+               page === 1 ? <Splash /> : <React.Fragment></React.Fragment>
+            }
+            {
+               page === 2 ? <About /> : <React.Fragment></React.Fragment>
+            }
+            {
+               page === 3 ? <More /> : <React.Fragment></React.Fragment>
+            }
+         </div>
          <div className="carousel_controls">
             <div 
                className="carousel_button" 
@@ -33,17 +45,6 @@ let Left = () => {
                onClick={() => handlePageSet(1)}>
                
             </div>
-         </div>
-         <div className="page_container">
-            {
-               page === 1 ? <Splash /> : <React.Fragment></React.Fragment>
-            }
-            {
-               page === 2 ? <About /> : <React.Fragment></React.Fragment>
-            }
-            {
-               page === 3 ? <More /> : <React.Fragment></React.Fragment>
-            }
          </div>
       </div>
    )

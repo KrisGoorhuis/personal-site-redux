@@ -19,24 +19,10 @@ import newWindowIcon from 'Assets/Images/open-link-white.png'
 
 let IndividualProject = (props) => {
    const [largeLoaded, setLargeLoaded] = useState(false)
-   // const [page, setPage] = useState(1);
 
-   
-   
+
    return (
       <React.Fragment>
-         {/* <div className="carousel_controls">
-            <div 
-               className="carousel_button" 
-               onClick={() => setPage(-1)}>
-               
-            </div>
-            <div 
-               className="carousel_button" 
-               onClick={() => setPage(1)}>
-               -->
-            </div>
-         </div> */}
          <div className="individual_project_container">
             <div className="links_container">
                {props.githubLink ? 
@@ -96,67 +82,72 @@ let IndividualProject = (props) => {
 
 let Projects = (props) => {
    return (
-      <div className="projects_container">
-         <IndividualProject
-            title="Beer Style Guide"
-            description="Terse React mapping a single JSON object. 
-               Custom configured webpack integrating SASS and Babel."
-            imageLarge={beerBrowser}
-            imageSmall={beerBrowserSmall}
-            githubLink="https://github.com/KrisGoorhuis/beer-browser"
-            liveSite="https://beer-style-guide.herokuapp.com/"
-         />
-         <IndividualProject 
-            title="Secret Unity Things"
-            description="Why my public github projects are relatively old.
-               This private repo holds original C# scripting and Unity 
-               engine development."
-            imageLarge={unityGame}
-            imageSmall={unityGameSmall}
-            
-         />
-         <IndividualProject
-            title="Temperature Data Visualization"
-            description="Another big JSON object pulled apart (a favorite thing 
-               of mine). This time mapped and presented with the D3 visualization 
-               library."
-            imageLarge={dataViz}
-            imageSmall={dataVizSmall}
-            githubLink="https://github.com/KrisGoorhuis/data-visualization-temperature"
-            liveSite="https://krisg-data-visualization-temp.herokuapp.com/"
-         />
-         <IndividualProject
-            title="Chat App"
-            description="My first foray into React. It integrates with a 
-               MongoDB database of my own make, storing chat history and 
-               allowing for private conversations, notifications, and 
-               login-free unique IDs."
-            imageLarge={chatApp}
-            imageSmall={chatAppSmall}
-            githubLink="https://github.com/KrisGoorhuis/chat-app"
-            liveSite="https://krisg-chat-app.herokuapp.com/"
-         />
-         <IndividualProject
-            title="Copy of The Eddy's old site"
-            description="Using someone else's work as more or less a mock, this
-               is a recreation using original CSS and assets."
-            imageLarge={eddyCopy}
-            imageSmall={eddyCopySmall}
-            githubLink="https://github.com/KrisGoorhuis/the-eddy-copy"
-            liveSite="https://krisg-theeddy-practicecopy.herokuapp.com/"
-         />
-         <IndividualProject
-            title="Snake Game"
-            description="An early passion project - a recreation of the 
-               classic snake game. Includes selectable stages, score counter, 
-               and, my favorite, your character is patterned after a coral 
-               snake."
-            imageLarge={snakeGame}
-            imageSmall={snakeGameSmall}
-            githubLink="https://github.com/KrisGoorhuis/snake-game"
-            liveSite="https://krisg-snake-game.herokuapp.com/"
-         />
-      </div>
+      <React.Fragment>
+         <div className="projects_head">
+            Personal projects live on sleepy servers. <br></br>
+            Please give them time to wake up if you want to visit.
+         </div>
+         <div className="projects_container">
+            <IndividualProject
+               title="Beer Style Guide"
+               description="Terse React mapping a single JSON object. 
+                  Custom configured webpack integrating SASS and Babel."
+               imageLarge={beerBrowser}
+               imageSmall={beerBrowserSmall}
+               githubLink="https://github.com/KrisGoorhuis/beer-browser"
+               liveSite="https://beer-style-guide.herokuapp.com/"
+            />
+            <IndividualProject 
+               title="Secret Unity Things"
+               description="Why my public GitHub repos are relatively stale.
+                  This private one is where I've been playing with C# and the Unity engine
+                  when time allows."
+               imageLarge={unityGame}
+               imageSmall={unityGameSmall}             
+            />
+            <IndividualProject
+               title="Temperature Data Visualization"
+               description="Another colossal JSON object pulled apart and mapped
+                  (a favorite thing of mine). This time presented with the D3 
+                  visualization library."
+               imageLarge={dataViz}
+               imageSmall={dataVizSmall}
+               githubLink="https://github.com/KrisGoorhuis/data-visualization-temperature"
+               liveSite="https://krisg-data-visualization-temp.herokuapp.com/"
+            />
+            <IndividualProject
+               title="Chat App"
+               description="My first foray into React. It integrates with a 
+                  MongoDB database of my own make, storing chat history and 
+                  allowing for private conversations, notifications, and 
+                  login-free unique IDs."
+               imageLarge={chatApp}
+               imageSmall={chatAppSmall}
+               githubLink="https://github.com/KrisGoorhuis/chat-app"
+               liveSite="https://krisg-chat-app.herokuapp.com/"
+            />
+            <IndividualProject
+               title="Copy of The Eddy's old site"
+               description="Using someone else's work as more or less a mock, this
+                  is a recreation using original CSS and assets."
+               imageLarge={eddyCopy}
+               imageSmall={eddyCopySmall}
+               githubLink="https://github.com/KrisGoorhuis/the-eddy-copy"
+               liveSite="https://krisg-theeddy-practicecopy.herokuapp.com/"
+            />
+            <IndividualProject
+               title="Snake Game"
+               description="An early passion project - a recreation of the 
+                  classic snake game. Includes selectable stages, score counter, 
+                  and, most importantly, your character is patterned after a coral 
+                  snake."
+               imageLarge={snakeGame}
+               imageSmall={snakeGameSmall}
+               githubLink="https://github.com/KrisGoorhuis/snake-game"
+               liveSite="https://krisg-snake-game.herokuapp.com/"
+            />
+         </div>
+      </React.Fragment>
    )
 }
 

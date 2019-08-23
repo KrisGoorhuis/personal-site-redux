@@ -35,16 +35,16 @@ let Photography = () => {
    let IndividualPhoto = (props) => {
 
       return (
-         <div className="photo_container" onClick={() => props.click() }>
-            {largeLoaded ? 
+         <div className="photo_container" onClick={() => props.click() }> 
                <img 
                   className="photo_small"
+                  style={largeLoaded ? {display: 'none'} : {} }
                   src={props.imageSmall}
                   alt="thumbnail"
                />
-               :
                <img 
                   className="photo_large"
+                  style={largeLoaded ? {} : { display: 'none' }}
                   src={props.image}
                   alt="thumbnail"
                   onLoad={ () => setLargeLoaded(true) }
@@ -76,96 +76,102 @@ let Photography = () => {
    }
 
    return (
-      <div className="photos_container">
-         {enlargedPhoto ? 
-            <React.Fragment>
-               <div className="enlarged_photo_container">
-                  <div 
-                     className="photo_carousel_control_left"
-                     onClick={ () => handlePhotoCarouselClick(-1) }
-                  >
-                     ⮜ 
+      <React.Fragment>
+         <div className="photos_head">
+            Projects live on sleepy servers. <br></br>
+            Please give them time to wake up if you want to visit.
+         </div>
+         <div className="photos_container">
+            {enlargedPhoto ? 
+               <React.Fragment>
+                  <div className="enlarged_photo_container">
+                     <div 
+                        className="photo_carousel_control_left"
+                        onClick={ () => handlePhotoCarouselClick(-1) }
+                     >
+                        ⮜ 
+                     </div>
+                     <img 
+                        className="enlarged_photo"
+                        src={enlargedPhoto} 
+                        alt="enlarged" 
+                        onClick={ () => handleImageClick() }
+                     />
+                     <div 
+                        className="photo_carousel_control_right"
+                        onClick={ () => handlePhotoCarouselClick(1) }
+                     >
+                        ⮞ 
+                     </div>
                   </div>
-                  <img 
-                     className="enlarged_photo"
-                     src={enlargedPhoto} 
-                     alt="enlarged" 
+                  <div 
+                     className="enlarged_photo_background"
                      onClick={ () => handleImageClick() }
-                  />
-                  <div 
-                     className="photo_carousel_control_right"
-                     onClick={ () => handlePhotoCarouselClick(1) }
                   >
-                      ⮞ 
                   </div>
-               </div>
-               <div 
-                  className="enlarged_photo_background"
-                  onClick={ () => handleImageClick() }
-               >
-               </div>
-            </React.Fragment> 
-            :
-            <React.Fragment></React.Fragment>
-         }
-      
+               </React.Fragment> 
+               :
+               <React.Fragment></React.Fragment>
+            }
+         
 
-         <IndividualPhoto 
-            image={ice}
-            imageSmall={iceSmall} 
-            click={ () => handleImageClick(ice) }
-         />
-         <IndividualPhoto 
-            image={beer} 
-            imageSmall={beerSmall}
-            click={ () => handleImageClick(beer) }
-         />
-         <IndividualPhoto 
-            image={rain} 
-            imageSmall={rainSmall} 
-            click={ () => handleImageClick(rain) }
-         />
-         <IndividualPhoto 
-            image={lithia} 
-            imageSmall={lithiaSmall} 
-            click={ () => handleImageClick(lithia) }
-         />
-         <IndividualPhoto 
-            image={cheese} 
-            imageSmall={cheeseSmall} 
-            click={ () => handleImageClick(cheese) }
-         />
-         <IndividualPhoto 
-            image={bear} 
-            imageSmall={bearSmall} 
-            click={ () => handleImageClick(bear) }
-         />
-         <IndividualPhoto 
-            image={orange} 
-            imageSmall={orangeSmall} 
-            click={ () => handleImageClick(orange) }
-         />
-         <IndividualPhoto 
-            image={green} 
-            imageSmall={greenSmall}
-            click={ () => handleImageClick(green) }
-         />
-         <IndividualPhoto 
-            image={curry} 
-            imageSmall={currySmall} 
-            click={ () => handleImageClick(curry) }
-         />
-         <IndividualPhoto 
-            image={pork} 
-            imageSmall={porkSmall} 
-            click={ () => handleImageClick(pork) }
-         />
-         <IndividualPhoto 
-         image={snow} 
-         imageSmall={snowSmall} 
-         click={ () => handleImageClick(snow) }
-         />
-      </div>
+            <IndividualPhoto 
+               image={ice}
+               imageSmall={iceSmall} 
+               click={ () => handleImageClick(ice) }
+            />
+            <IndividualPhoto 
+               image={beer} 
+               imageSmall={beerSmall}
+               click={ () => handleImageClick(beer) }
+            />
+            <IndividualPhoto 
+               image={rain} 
+               imageSmall={rainSmall} 
+               click={ () => handleImageClick(rain) }
+            />
+            <IndividualPhoto 
+               image={lithia} 
+               imageSmall={lithiaSmall} 
+               click={ () => handleImageClick(lithia) }
+            />
+            <IndividualPhoto 
+               image={cheese} 
+               imageSmall={cheeseSmall} 
+               click={ () => handleImageClick(cheese) }
+            />
+            <IndividualPhoto 
+               image={bear} 
+               imageSmall={bearSmall} 
+               click={ () => handleImageClick(bear) }
+            />
+            <IndividualPhoto 
+               image={orange} 
+               imageSmall={orangeSmall} 
+               click={ () => handleImageClick(orange) }
+            />
+            <IndividualPhoto 
+               image={green} 
+               imageSmall={greenSmall}
+               click={ () => handleImageClick(green) }
+            />
+            <IndividualPhoto 
+               image={curry} 
+               imageSmall={currySmall} 
+               click={ () => handleImageClick(curry) }
+            />
+            <IndividualPhoto 
+               image={pork} 
+               imageSmall={porkSmall} 
+               click={ () => handleImageClick(pork) }
+            />
+            <IndividualPhoto 
+            image={snow} 
+            imageSmall={snowSmall} 
+            click={ () => handleImageClick(snow) }
+            />
+         </div>
+      </React.Fragment>
    )
 }
 

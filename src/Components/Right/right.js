@@ -5,7 +5,7 @@ import Projects from 'Components/Right/Projects/projects.js'
 import Photography from 'Components/Right/Photography/photography.js'
 
 let Right = () => {
-   let [page, setPage] = useState(1)
+   let [page, setPage] = useState(0)
 
    return (
       <div className="right_container">
