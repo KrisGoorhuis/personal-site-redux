@@ -6,6 +6,12 @@
   --medium-green: #ddffca;
   --medium-red: #ffceca;
 
+  --white: #FEFEFC;
+  --purple: #BEB7E2;
+  --red: #CC6267;
+  --green-mint: #8ED5BB;
+  --green-green: #45C695;
+
 }
 
 body {
@@ -16,7 +22,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* background: var(--accent-blue); */
+  background: var(--white);
 }
 
 code {

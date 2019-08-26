@@ -30,7 +30,7 @@
    font-size: 40px;
 }
 
-.bluetext {
+.redtext {
    text-decoration: none;
-   color: #caefff;
+   color: var(--red);
 }

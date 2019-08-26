@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import './projects.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 import beerBrowser from 'Assets/Images/beer-browser.png'
 import beerBrowserSmall from 'Assets/Images/beer-browser-small.jpg'
@@ -22,7 +24,15 @@ let IndividualProject = (props) => {
 
    return (
       <React.Fragment>
-         <div className="individual_project_container">
+         <div 
+            data-aos="fade-left"
+            data-aos-offset="200"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            data-aos-anchor-placement="top"
+            data-aos-mirror="true"
+            className={props.className}
+         >
             <div className="links_container">
                {props.githubLink ? 
                   <a target="_blank" rel="noopener noreferrer" 
@@ -80,6 +90,10 @@ let IndividualProject = (props) => {
 
 
 let Projects = (props) => {
+   AOS.init();
+
+   // class names individual_project_container_light and _dark determine color
+   // They should alternate
    return (
       <React.Fragment>
          <div className="projects_head">
@@ -89,6 +103,7 @@ let Projects = (props) => {
          <div className="projects_container">
             <IndividualProject
                title="Chat App"
+               className="individual_project_container"
                description="My first foray into React. It integrates with a 
                   MongoDB database of my own make, storing chat history and 
                   allowing for private conversations, notifications, and 
@@ -100,6 +115,7 @@ let Projects = (props) => {
             />
             <IndividualProject
                title="Beer Style Guide"
+               className="individual_project_container"
                description="Terse React mapping a single JSON object. 
                   Custom configured webpack integrating SASS and Babel."
                imageLarge={beerBrowser}
@@ -109,6 +125,7 @@ let Projects = (props) => {
             />
             <IndividualProject 
                title="Secret Unity Things"
+               className="individual_project_container"
                description="Why my public GitHub repos are relatively stale.
                   This private one is where I've been playing with C# and the Unity engine
                   when time allows."
@@ -117,6 +134,7 @@ let Projects = (props) => {
             />
             <IndividualProject
                title="Temperature Data Visualization"
+               className="individual_project_container"
                description="Another colossal JSON object pulled apart and mapped
                   (a favorite thing of mine). This time presented with the D3 
                   visualization library."
@@ -128,6 +146,7 @@ let Projects = (props) => {
             
             <IndividualProject
                title="Copy of The Eddy's old site"
+               className="individual_project_container"
                description="Using someone else's work as more or less a mock, this
                   is a recreation using original CSS and assets."
                imageLarge={eddyCopy}
@@ -137,6 +156,7 @@ let Projects = (props) => {
             />
             <IndividualProject
                title="Snake Game"
+               className="individual_project_container"
                description="An early passion project - a recreation of the 
                   classic snake game. Includes selectable stages, score counter, 
                   and, most importantly, your character is patterned after a coral 

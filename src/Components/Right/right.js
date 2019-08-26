@@ -11,13 +11,13 @@ let Right = () => {
       <div className="right_container">
          <div className="right_controls">
             <div 
-               className="right_button"
+               className={page === 0 ? "right_button_active" : "right_button"}
                onClick={ () => setPage(0) }
             >
                <p>Projects</p>
             </div>
             <div 
-               className="right_button"
+               className={page === 0 ? "right_button" : "right_button_active"}
                onClick={ () => setPage(1) }
             >
                <p>Photography</p>   

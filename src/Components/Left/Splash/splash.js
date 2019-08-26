@@ -36,7 +36,7 @@ let Splash = () => {
          </p>
          <p>I’d love to
             <a 
-               className="bluetext" 
+               className="redtext" 
                href="mailto:krisgoorhuis@gmail.com">
                &nbsp; hear from you.
             </a></p>

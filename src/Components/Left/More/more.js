@@ -8,6 +8,8 @@
 //Denis Klyuchnikov, RU   - open new window icon
 // steve losh (http://stevelosh.com/)
 // brian atiyeh (https://www.brianatiyeh.com/)
+// http://colormind.io/bootstrap/
+// https://www.heropatterns.com/
 
 // website things:
 // photoship
