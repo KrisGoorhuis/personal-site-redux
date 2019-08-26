@@ -41,7 +41,7 @@
 .photo_carousel_control_left {
     height: 100%;
     position: relative;
-    left: 70px;
+    /* left: 70px; */
     color: rgba(0, 0, 0, 0);
     display: flex;
     justify-content: center;
@@ -58,7 +58,7 @@
 .photo_carousel_control_right {
     height: 100%;
     position: relative;
-    left: -70px;
+    /* left: -70px; */
     color: rgba(0, 0, 0, 0);
     display: flex;
     justify-content: center;

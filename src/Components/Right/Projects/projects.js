@@ -20,7 +20,6 @@ import newWindowIcon from 'Assets/Images/open-link-white.png'
 let IndividualProject = (props) => {
    const [largeLoaded, setLargeLoaded] = useState(false)
 
-
    return (
       <React.Fragment>
          <div className="individual_project_container">
@@ -89,6 +88,17 @@ let Projects = (props) => {
          </div>
          <div className="projects_container">
             <IndividualProject
+               title="Chat App"
+               description="My first foray into React. It integrates with a 
+                  MongoDB database of my own make, storing chat history and 
+                  allowing for private conversations, notifications, and 
+                  login-free unique IDs."
+               imageLarge={chatApp}
+               imageSmall={chatAppSmall}
+               githubLink="https://github.com/KrisGoorhuis/chat-app"
+               liveSite="https://krisg-chat-app.herokuapp.com/"
+            />
+            <IndividualProject
                title="Beer Style Guide"
                description="Terse React mapping a single JSON object. 
                   Custom configured webpack integrating SASS and Babel."
@@ -115,17 +125,7 @@ let Projects = (props) => {
                githubLink="https://github.com/KrisGoorhuis/data-visualization-temperature"
                liveSite="https://krisg-data-visualization-temp.herokuapp.com/"
             />
-            <IndividualProject
-               title="Chat App"
-               description="My first foray into React. It integrates with a 
-                  MongoDB database of my own make, storing chat history and 
-                  allowing for private conversations, notifications, and 
-                  login-free unique IDs."
-               imageLarge={chatApp}
-               imageSmall={chatAppSmall}
-               githubLink="https://github.com/KrisGoorhuis/chat-app"
-               liveSite="https://krisg-chat-app.herokuapp.com/"
-            />
+            
             <IndividualProject
                title="Copy of The Eddy's old site"
                description="Using someone else's work as more or less a mock, this

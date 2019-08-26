@@ -2,19 +2,26 @@ import React, { useState } from 'react'
 import './photography.css'
 
 import rain from 'Assets/Images/Photos/rain.jpg'
-import lithia from 'Assets/Images/Photos/lithia.jpg'
+import lithia from 'Assets/Images/Photos/lithia.jpeg'
 import bear from 'Assets/Images/Photos/bear.jpg'
 import beer from 'Assets/Images/Photos/beer.jpg'
+import bean from 'Assets/Images/Photos/bean.jpg'
 import cheese from 'Assets/Images/Photos/cheese.jpg'
-import curry from 'Assets/Images/Photos/curry.jpg'
-import green from 'Assets/Images/Photos/green.jpg'
-import orange from 'Assets/Images/Photos/orange.jpg'
-import pork from 'Assets/Images/Photos/pork.jpg'
+import shed from 'Assets/Images/Photos/shed.JPG'
 import snow from 'Assets/Images/Photos/snow.jpg'
 import ice from 'Assets/Images/Photos/ice.jpg'
+import evening from 'Assets/Images/Photos/evening.jpg'
+import forest from 'Assets/Images/Photos/forest.jpg'
+import mist from 'Assets/Images/Photos/mist.jpg'
+import moto from 'Assets/Images/Photos/moto.jpg'
+import shells from 'Assets/Images/Photos/shells.jpg'
+import spider from 'Assets/Images/Photos/spider.jpg'
+import sunset from 'Assets/Images/Photos/sunset.jpg'
+import up from 'Assets/Images/Photos/up.jpg'
 
-let photoArray = [ice, beer, rain, lithia, cheese,
-    bear, orange, green, curry, pork, snow]
+let photoArray = [ice, beer, rain, lithia,
+   spider,  shed, bean, up, evening, forest, mist, moto, shells, 
+     bear, sunset, cheese, snow]
 
 let Photography = () => {
    let [enlargedPhoto, setEnlargedPhoto] = useState(null)
@@ -102,8 +109,14 @@ let Photography = () => {
                <React.Fragment></React.Fragment>
             }
          
-
-            <IndividualPhoto 
+            {photoArray.map( (photo, index) => {
+               return <IndividualPhoto 
+                  image={photo}
+                  click={ () => handleImageClick(photo) }
+                  key={index}
+               />
+            })}
+            {/* <IndividualPhoto 
                image={ice}
                imageSmall={iceSmall} 
                click={ () => handleImageClick(ice) }
@@ -157,7 +170,7 @@ let Photography = () => {
             image={snow} 
             imageSmall={snowSmall} 
             click={ () => handleImageClick(snow) }
-            />
+            /> */}
          </div>
       </React.Fragment>
    )

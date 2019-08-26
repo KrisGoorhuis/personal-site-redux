@@ -8,6 +8,7 @@ import More from 'Components/Left/About/about.js'
 let Left = () => {
    const [page, setPage] = useState(1);
 
+   // Lets us scroll in circles instead of a line.
    let handlePageSet = (change) => {
       let nextPage = page;
       nextPage += change;
@@ -20,6 +21,10 @@ let Left = () => {
       setPage(nextPage)
    }
 
+
+   // We'll never reach page 0 or 4 thanks to handlePageSet.
+   // Could be done more elegantly I'm sure, but I don't anticipate 
+   // this ever being a problem.
    let buttonText = {
       0: "More",
       1: "Home",
