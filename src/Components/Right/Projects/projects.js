@@ -92,14 +92,12 @@ let IndividualProject = (props) => {
 let Projects = (props) => {
    AOS.init();
 
-   // class names individual_project_container_light and _dark determine color
-   // They should alternate
    return (
       <React.Fragment>
-         <div className="projects_head">
+         {/* <div className="projects_head">
             Personal projects live on sleepy servers. <br></br>
             Please give them time to wake up if you want to visit.
-         </div>
+         </div> */}
          <div className="projects_container">
             <IndividualProject
                title="Chat App"

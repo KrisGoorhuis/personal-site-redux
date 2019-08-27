@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './photography.css'
 
+import placeholder from 'Assets/Images/Photos/placeholder.jpg'
+
 import rain from 'Assets/Images/Photos/rain.jpg'
 import lithia from 'Assets/Images/Photos/lithia.jpeg'
 import bear from 'Assets/Images/Photos/bear.jpg'
@@ -19,6 +21,7 @@ import spider from 'Assets/Images/Photos/spider.jpg'
 import sunset from 'Assets/Images/Photos/sunset.jpg'
 import up from 'Assets/Images/Photos/up.jpg'
 
+
 let photoArray = [ice, beer, rain, lithia,
    spider,  shed, bean, up, evening, forest, mist, moto, shells, 
      bear, sunset, cheese, snow]
@@ -34,7 +37,7 @@ let Photography = () => {
                <img 
                   className="photo_small"
                   style={largeLoaded ? {display: 'none'} : {} }
-                  src={props.imageSmall}
+                  src={placeholder}
                   alt="thumbnail"
                />
                <img 
@@ -72,10 +75,10 @@ let Photography = () => {
 
    return (
       <React.Fragment>
-         <div className="photos_head">
+         {/* <div className="photos_head">
             Projects live on sleepy servers. <br></br>
             Please give them time to wake up if you want to visit.
-         </div>
+         </div> */}
          <div className="photos_container">
             {enlargedPhoto ? 
                <React.Fragment>
