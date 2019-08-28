@@ -4,12 +4,12 @@ import './photography.css'
 import placeholder from 'Assets/Images/Photos/placeholder.jpg'
 
 import rain from 'Assets/Images/Photos/rain.jpg'
-import lithia from 'Assets/Images/Photos/lithia.jpeg'
+import lithia from 'Assets/Images/Photos/lithia.jpg'
 import bear from 'Assets/Images/Photos/bear.jpg'
 import beer from 'Assets/Images/Photos/beer.jpg'
 import bean from 'Assets/Images/Photos/bean.jpg'
 import cheese from 'Assets/Images/Photos/cheese.jpg'
-import shed from 'Assets/Images/Photos/shed.JPG'
+import shed from 'Assets/Images/Photos/shed.jpg'
 import snow from 'Assets/Images/Photos/snow.jpg'
 import ice from 'Assets/Images/Photos/ice.jpg'
 import evening from 'Assets/Images/Photos/evening.jpg'
@@ -23,14 +23,14 @@ import up from 'Assets/Images/Photos/up.jpg'
 
 
 let photoArray = [ice, beer, rain, lithia,
-   spider,  shed, bean, up, evening, forest, mist, moto, shells, 
+   spider, shed, bean, up, evening, forest, mist, moto, shells, 
      bear, sunset, cheese, snow]
 
 let Photography = () => {
    let [enlargedPhoto, setEnlargedPhoto] = useState(null)
-   let [largeLoaded, setLargeLoaded] = useState(false)
-
+   
    let IndividualPhoto = (props) => {
+      let [largeLoaded, setLargeLoaded] = useState(false)
 
       return (
          <div className="photo_container" onClick={() => props.click() }> 
@@ -109,7 +109,7 @@ let Photography = () => {
                   </div>
                </React.Fragment> 
                :
-               <React.Fragment></React.Fragment>
+               null
             }
          
             {photoArray.map( (photo, index) => {
@@ -119,61 +119,6 @@ let Photography = () => {
                   key={index}
                />
             })}
-            {/* <IndividualPhoto 
-               image={ice}
-               imageSmall={iceSmall} 
-               click={ () => handleImageClick(ice) }
-            />
-            <IndividualPhoto 
-               image={beer} 
-               imageSmall={beerSmall}
-               click={ () => handleImageClick(beer) }
-            />
-            <IndividualPhoto 
-               image={rain} 
-               imageSmall={rainSmall} 
-               click={ () => handleImageClick(rain) }
-            />
-            <IndividualPhoto 
-               image={lithia} 
-               imageSmall={lithiaSmall} 
-               click={ () => handleImageClick(lithia) }
-            />
-            <IndividualPhoto 
-               image={cheese} 
-               imageSmall={cheeseSmall} 
-               click={ () => handleImageClick(cheese) }
-            />
-            <IndividualPhoto 
-               image={bear} 
-               imageSmall={bearSmall} 
-               click={ () => handleImageClick(bear) }
-            />
-            <IndividualPhoto 
-               image={orange} 
-               imageSmall={orangeSmall} 
-               click={ () => handleImageClick(orange) }
-            />
-            <IndividualPhoto 
-               image={green} 
-               imageSmall={greenSmall}
-               click={ () => handleImageClick(green) }
-            />
-            <IndividualPhoto 
-               image={curry} 
-               imageSmall={currySmall} 
-               click={ () => handleImageClick(curry) }
-            />
-            <IndividualPhoto 
-               image={pork} 
-               imageSmall={porkSmall} 
-               click={ () => handleImageClick(pork) }
-            />
-            <IndividualPhoto 
-            image={snow} 
-            imageSmall={snowSmall} 
-            click={ () => handleImageClick(snow) }
-            /> */}
          </div>
       </React.Fragment>
    )

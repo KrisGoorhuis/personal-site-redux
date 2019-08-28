@@ -52,7 +52,6 @@
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    /* border-radius: 10px; */
     height: 30%;
     margin: auto;
     width: 100%;
@@ -62,9 +61,8 @@
 
 .photo_carousel_control_left:hover {
     cursor: pointer;
-    /* background: var(--purple); */
     color: var(--white);
-    font-size: 26px;
+    /* font-size: 26px; */
 }
 
 .photo_carousel_control_right {
@@ -75,7 +73,6 @@
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    /* border-radius: 5px; */
     height: 100%;
     margin: auto;
     width: 100%;
@@ -84,10 +81,8 @@
 
 .photo_carousel_control_right:hover {
     cursor: pointer;
-    /* background: var(--purple); */
     color: var(--white);
-    font-size: 26px;
-
+    /* font-size: 26px; */
 }
 
 
@@ -96,7 +91,6 @@
     display: flex;
     border: 1px solid black; 
     overflow: hidden;
-    /* width: 30%; */
 }
 
 .photo_small {

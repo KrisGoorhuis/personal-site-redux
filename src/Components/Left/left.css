@@ -8,7 +8,23 @@
    width: 600px;
    padding-left: 30px;
    font-size: 28px;
+}
 
+.left_component {
+   transition: .5s;
+   position: relative;
+}
+.example-appear {
+   opacity: 0.01;
+ }
+ 
+ .example-appear.example-appear-active {
+   opacity: 1;
+   transition: opacity .5s ease-in;
+ }
+
+#more_container {
+   transition: .5s;
 }
 
 .carousel_controls {
@@ -45,5 +61,23 @@
 @media only screen and (max-width: 1230px) {
    .left_container {
       width: 500px;
+   }
+ }
+
+ .noselect {
+   -webkit-touch-callout: none; /* iOS Safari */
+     -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+         -ms-user-select: none; /* Internet Explorer/Edge */
+             user-select: none; /* Non-prefixed version, currently
+                                   supported by Chrome and Opera */
+                                   /* https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+ }
+
+
+ @media only screen and (max-width: 600px) {
+   .left_container {
+      background-color: lightblue;
    }
  }

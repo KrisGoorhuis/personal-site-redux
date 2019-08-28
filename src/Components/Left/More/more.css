@@ -1,0 +1,35 @@
+.details_head {
+    color: var(--red);
+    margin-left: 20px;
+}
+
+.details_body {
+    font-size: 18px;
+    margin: 20px;
+    margin-left: 60px;
+}
+
+.credits {
+    background-color: var(--green-mint);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='gray' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.credits ul {
+    margin: 0px;
+    margin-top: 7px;
+}
+
+.credits li {
+    font-size: 12px;
+    list-style-type: none;
+    /* margin-top: 2px; */
+}
+
+.credits a {
+    /* text-decoration: none; */
+    color: var(--red);
+}

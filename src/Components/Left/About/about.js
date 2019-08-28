@@ -3,12 +3,17 @@ import React from 'react'
 let About = () => {
    return (
       <div>
-         Hopefully the projects on the right look neat, but this website is the
-         true portfolio piece. 
-   
-         In due course, there are a couple of people and things to acknowledge.
-         https://www.brianatiyeh.com/ was a big inspiration.
-   
+         Someone once told me my favorite puzzle game was essentially a 
+         programming challenge. The instant I finished my first little
+         word-reversing script I knew how right they were.
+
+         I immediately began learning by doing, chewing through technologies 
+         from Javascript web frameworks to Python machine learning tools to databases
+         structuring and querying, and even game development with C# and Unity. 
+         Sprinkle in some automated testing and a recently concluded web development
+         internship, and I’m eager to begin this new career in earnest.
+
+         Which brings me here. To where you are.
       </div>
    ) 
 }

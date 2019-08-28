@@ -16,13 +16,13 @@ let Right = () => {
                   "right_toggle_card is_flipped"}
                >
                   <div
-                     className="toggle_projects_face"
+                     className="toggle_projects_face noselect"
                      onClick={() => setPage(1)}
                   >
                      View Photography
                   </div>
                   <div
-                     className="toggle_photography_face"
+                     className="toggle_photography_face noselect"
                      onClick={() => setPage(0)}
                   >
                      View Projects
