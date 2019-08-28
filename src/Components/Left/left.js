@@ -44,6 +44,8 @@ let Left = () => {
                   transitionName="leftFade"
                   transitionAppear={true}
                   transitionAppearTimeout={300}
+                  transitionEnterTimeout={300}
+                  transitionLeaveTimeout={300}
                >
                   <Splash />
                </CSSTransitionGroup> 
@@ -55,6 +57,8 @@ let Left = () => {
                   transitionName="leftFade"
                   transitionAppear={true}
                   transitionAppearTimeout={300}
+                  transitionEnterTimeout={300}
+                  transitionLeaveTimeout={300}
                >
                   <About />
                </CSSTransitionGroup> 
@@ -66,6 +70,8 @@ let Left = () => {
                   transitionName="leftFade"
                   transitionAppear={true}
                   transitionAppearTimeout={300}
+                  transitionEnterTimeout={300}
+                  transitionLeaveTimeout={300}
                >
                   <More /> 
                </CSSTransitionGroup>

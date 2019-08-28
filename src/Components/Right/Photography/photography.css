@@ -56,7 +56,6 @@
     margin: auto;
     width: 100%;
     transition: .3s;
-
 }
 
 .photo_carousel_control_left:hover {
@@ -82,10 +81,7 @@
 .photo_carousel_control_right:hover {
     cursor: pointer;
     color: var(--white);
-    /* font-size: 26px; */
 }
-
-
 
 .photo_container {
     display: flex;
@@ -104,3 +100,18 @@
 .photo_container img:hover {
     cursor: pointer;
 }
+
+@media only screen and (max-width: 900px) {
+    .photos_container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .enlarged_photo_container {
+        display: flex;
+    }
+    .photo_carousel_control_left {
+        display: none;
+    }
+    .photo_carousel_control_right {
+        display: none;
+    }
+  }

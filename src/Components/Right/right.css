@@ -5,7 +5,7 @@
 
 .right_head {
    display: flex;
-   width: 500px;
+   max-width: 500px;
    padding: 10px;
    margin: auto;
    margin-top: 50px;

@@ -28,10 +28,21 @@
    align-items: center;
    margin: 0px;
    margin-left: 10px;
-   font-size: 40px;
+   font-size: 1.5em;
 }
 
 .redtext {
    text-decoration: none;
    color: var(--red);
 }
+
+@media only screen and (max-width: 900px) {
+   .top_container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+   .intro_container {
+      display: flex;
+   }
+ }
