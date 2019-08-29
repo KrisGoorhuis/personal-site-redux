@@ -1,7 +1,6 @@
 .splash_container {
    max-width: 100%;
    font-size: 1em;
-   /* overflow-wrap:  */
 }
 
 .portrait_container {
@@ -37,6 +36,10 @@
 }
 
 @media only screen and (max-width: 900px) {
+
+   .splash_container {
+      margin: 30px;
+   }
    .top_container {
       flex-direction: column;
       justify-content: center;
@@ -44,5 +47,9 @@
    }
    .intro_container {
       display: flex;
+      margin-top: 30px;
+   }
+   .intro_container :nth-child(1) {
+      margin-left: 0px;
    }
  }

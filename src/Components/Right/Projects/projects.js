@@ -37,7 +37,6 @@ let IndividualProject = (props) => {
                {props.githubLink ? 
                   <a target="_blank" rel="noopener noreferrer" 
                      href={props.githubLink} 
-                     
                   > 
                      <img 
                         className="github_link" 
@@ -110,6 +109,7 @@ let Projects = (props) => {
                imageSmall={chatAppSmall}
                githubLink="https://github.com/KrisGoorhuis/chat-app"
                liveSite="https://krisg-chat-app.herokuapp.com/"
+               
             />
             <IndividualProject
                title="Beer Style Guide"

@@ -27,7 +27,6 @@ let Splash = () => {
                <p>Hey there,</p>
                <p>I’m Kris G.</p>
             </div>
-
          </div>
          <p>
             I’m a programmer, snowboarder,
