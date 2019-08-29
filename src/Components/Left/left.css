@@ -15,11 +15,11 @@
    position: relative;
 }
 
-.example-appear {
+.leftFade-appear {
    opacity: 0.01;
  }
  
- .example-appear.example-appear-active {
+ .leftFade-appear.leftFade-appear-active {
    opacity: 1;
    transition: opacity .5s ease-in;
  }

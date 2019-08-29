@@ -9,7 +9,7 @@ import bear from 'Assets/Images/Photos/bear.jpg'
 import beer from 'Assets/Images/Photos/beer.jpg'
 import bean from 'Assets/Images/Photos/bean.jpg'
 import cheese from 'Assets/Images/Photos/cheese.jpg'
-import shed from 'Assets/Images/Photos/shed.jpg'
+import green from 'Assets/Images/Photos/green.jpg'
 import snow from 'Assets/Images/Photos/snow.jpg'
 import ice from 'Assets/Images/Photos/ice.jpg'
 import evening from 'Assets/Images/Photos/evening.jpg'
@@ -23,7 +23,7 @@ import up from 'Assets/Images/Photos/up.jpg'
 
 
 let photoArray = [ice, beer, rain, lithia,
-   spider, shed, bean, up, evening, forest, mist, moto, shells, 
+   spider, green, bean, up, evening, forest, mist, moto, shells, 
      bear, sunset, cheese, snow]
 
 let Photography = () => {
