@@ -107,6 +107,7 @@ let Photography = () => {
                      onClick={ () => handleImageClick() }
                   >
                   </div>
+                  <div className="enlarged_photo_container"></div>
                </React.Fragment> 
                :
                null
