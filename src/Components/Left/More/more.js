@@ -37,22 +37,34 @@ let More = () => {
                </div> 
                <div className="details_body">
                   Naturally, this website is my demonstration of my abilities. It sports automatic compiling and deployment via Babel and Webpack as packaged with the create-react-app.
+
+
                </div>
-               <div className="details_technology">
+               {/* <div className="details_technology">
                   React
                   Photoshop
-               </div>               
+               </div>                */}
             </div>
          </div>
-         <div className="credits">
-            Some credits
-            <ul>
-               <li><span className="redtext"> Denis Klyuchnikov</span> - new window icon</li>
-               <li><a href="http://stevelosh.com/">Steve Losh</a> - design inspiration</li>
-               <li><a href="https://www.brianatiyeh.com/">Brian Atiyeh</a> - design inspiration</li>
-               <li><a href="http://colormind.io/">Colormind</a> - color tools</li>
-               <li><a href="https://www.heropatterns.com/">heropatterns.com</a> - SVG textures</li>
-            </ul>
+         <div className="more_bottom">
+            <div>
+               Some credits
+               <ul>
+                  <li><span className="redtext"> Denis Klyuchnikov</span> - new window icon</li>
+                  <li><a href="http://stevelosh.com/">Steve Losh</a> - design inspiration</li>
+                  <li><a href="https://www.brianatiyeh.com/">Brian Atiyeh</a> - design inspiration</li>
+                  <li><a href="http://colormind.io/">Colormind</a> - color tools</li>
+                  <li><a href="https://www.heropatterns.com/">heropatterns.com</a> - SVG textures</li>
+               </ul>
+            </div>
+            <div>
+               Made using
+               <ul>
+                  <li>React</li>
+                  <li>Photoshop</li>
+                  <li></li>
+               </ul>
+            </div>
          </div>
       </div>
    )
