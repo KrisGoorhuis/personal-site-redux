@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './photography.css'
 
+import leftArrow from 'Assets/Images/left_arrow.svg'
+
 import placeholder from 'Assets/Images/Photos/placeholder.jpg'
 
 import rain from 'Assets/Images/Photos/rain.jpg'
@@ -87,7 +89,7 @@ let Photography = () => {
                         className="photo_carousel_control_left"
                         onClick={ () => handlePhotoCarouselClick(-1) }
                      >
-                        ⮜ 
+                        {/* <div>{leftArrow}</div> */}
                      </div>
                      <img 
                         className="enlarged_photo"
@@ -99,7 +101,7 @@ let Photography = () => {
                         className="photo_carousel_control_right"
                         onClick={ () => handlePhotoCarouselClick(1) }
                      >
-                        ⮞ 
+                        <div style={{transform: "rotate(180deg)"}}>{leftArrow}</div>
                      </div>
                   </div>
                   <div 
