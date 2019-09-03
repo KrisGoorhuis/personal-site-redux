@@ -14,6 +14,7 @@ let Me = () => {
             The instant I finished my first little
             word-reversing script I knew how right they were.
          </div>
+         <div className="me_placeholder"></div>
          <div className="me_segment">
             I've since been learning by doing, chewing through technologies 
             from Javascript web frameworks to Python machine learning tools to databases
@@ -23,7 +24,8 @@ let Me = () => {
          </div>
 
          <div className="me_footer">
-            Which brings me here. To where you are. Hopefully enjoying the practical half of my resume.<br></br> 
+            Hopefully you're enjoying the practical half of my resume.
+            <br></br> 
             If you'd like to check out the theory half, &nbsp; 
             <a 
             href={testRes} 
