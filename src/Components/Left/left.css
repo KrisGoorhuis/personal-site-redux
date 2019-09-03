@@ -18,6 +18,10 @@
 .leftFade-appear {
    opacity: 0.01;
  }
+
+ .transition_group {
+    height: 100%;
+ }
  
  .leftFade-appear.leftFade-appear-active {
    opacity: 1;
@@ -26,6 +30,22 @@
 
 #more_container {
    transition: .5s;
+}
+
+.page_container {
+   height: 500px;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.bottom_bar {
+   width: 100%;
+   height: 0px;
+   background: rgba(0, 0, 0, .1);
+   box-shadow: 0px 0px;
 }
 
 .carousel_controls {
@@ -51,14 +71,6 @@
    font-size: 14px;
 }
 
-.page_container {
-   height: 500px;
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
 @media only screen and (max-width: 1230px) {
    .left_container {
       max-width: 500px;
@@ -73,6 +85,23 @@
  }
 
  @media only screen and (max-width: 900px) {
+   .carousel_controls {
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+   }
+
+   /* Keep the  same as .carousel_button border width */
+   .carousel_control :nth-child(1){
+      margin-right: -3px;
+   }
+
+   .page_container {
+      margin-top: 70px;
+   }
+
    .left_container {
       position: relative;
       margin: auto;

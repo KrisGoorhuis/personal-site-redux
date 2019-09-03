@@ -15,6 +15,8 @@ import eddyCopy from 'Assets/Images/the-eddy-copy.png'
 import eddyCopySmall from 'Assets/Images/the-eddy-copy-small.jpg'
 import unityGame from 'Assets/Images/unity-game.png'
 import unityGameSmall from 'Assets/Images/unity-game-small.jpg'
+import minesweeper from 'Assets/Images/minesweeper.png'
+import minesweeperSmall from 'Assets/Images/minesweeper-small.jpg'
 
 import githubMark from 'Assets/Images/github-mark.png'
 import newWindowIcon from 'Assets/Images/open-link-white.png'
@@ -34,32 +36,35 @@ let IndividualProject = (props) => {
             className={props.className}
          >
             <div className="links_container">
-               {props.githubLink ? 
-                  <a target="_blank" rel="noopener noreferrer" 
-                     href={props.githubLink} 
-                  > 
-                     <img 
-                        className="github_link" 
-                        src={githubMark} 
-                        alt="github 'mark' logo"
-                     />
-                  </a> 
-                  :
-                  <div>--</div>
-               }
-               {props.liveSite ? 
-                  <a target="_blank" rel="noopener noreferrer"
-                     href={props.liveSite} 
-                  > 
-                     <img 
-                        className="outside_link" 
-                        src={newWindowIcon} 
-                        alt="outside link"
-                     />
-                  </a> 
-                  :
-                  <div></div>
-               }
+               <div className="links_container_left">
+                  {props.githubLink ? 
+                     <a target="_blank" rel="noopener noreferrer" 
+                        href={props.githubLink} 
+                     > 
+                        <img 
+                           className="github_link" 
+                           src={githubMark} 
+                           alt="github 'mark' logo"
+                        />
+                     </a> 
+                     :
+                     <div>&nbsp;--&nbsp;</div>
+                  }
+                  {props.liveSite ? 
+                     <a target="_blank" rel="noopener noreferrer"
+                        href={props.liveSite} 
+                     > 
+                        <img 
+                           className="outside_link" 
+                           src={newWindowIcon} 
+                           alt="outside link"
+                        />
+                     </a> 
+                     :
+                     <div>--&nbsp;</div>
+                  }
+               </div>
+               {/* <div>up</div> */}
             </div>
             <div className="project_images">
                <img 
@@ -101,10 +106,7 @@ let Projects = (props) => {
             <IndividualProject
                title="Chat App"
                className="individual_project_container"
-               description="My first foray into React. It integrates with a 
-                  MongoDB database of my own make, storing chat history and 
-                  allowing for private conversations, notifications, and 
-                  login-free unique IDs."
+               description="My first foray into React. It integrates with a MongoDB database of my own make, storing chat history and allowing for private conversations, notifications, and login-free unique IDs."
                imageLarge={chatApp}
                imageSmall={chatAppSmall}
                githubLink="https://github.com/KrisGoorhuis/chat-app"
@@ -114,8 +116,7 @@ let Projects = (props) => {
             <IndividualProject
                title="Beer Style Guide"
                className="individual_project_container"
-               description="Terse React mapping a single JSON object. 
-                  Custom configured webpack integrating SASS and Babel."
+               description="Terse React mapping a single large JSON object. Custom scratch-configured webpack integrating SASS and Babel."
                imageLarge={beerBrowser}
                imageSmall={beerBrowserSmall}
                githubLink="https://github.com/KrisGoorhuis/beer-browser"
@@ -124,18 +125,14 @@ let Projects = (props) => {
             <IndividualProject 
                title="Secret Unity Things"
                className="individual_project_container"
-               description="Why my public GitHub repos are relatively stale.
-                  This private one is where I've been playing with C# and the Unity engine
-                  when time allows."
+               description="Why my public GitHub repos are relatively stale. This private one is where I've been playing with C# and the Unity engine when time allows."
                imageLarge={unityGame}
                imageSmall={unityGameSmall}             
             />
             <IndividualProject
                title="Temperature Data Visualization"
                className="individual_project_container"
-               description="Another colossal JSON object pulled apart and mapped
-                  (a favorite thing of mine). This time presented with the D3 
-                  visualization library."
+               description="Another colossal JSON object pulled apart and mapped (a favorite thing of mine). This time presented with the D3 visualization library."
                imageLarge={dataViz}
                imageSmall={dataVizSmall}
                githubLink="https://github.com/KrisGoorhuis/data-visualization-temperature"
@@ -145,20 +142,26 @@ let Projects = (props) => {
             <IndividualProject
                title="Copy of The Eddy's old site"
                className="individual_project_container"
-               description="Using someone else's work as more or less a mock, this
-                  is a recreation using original CSS and assets."
+               description="Using someone else's work as more or less a mock, this is a recreation using original CSS and assets. Design is not my strongest suit, but I do like mocks."
                imageLarge={eddyCopy}
                imageSmall={eddyCopySmall}
                githubLink="https://github.com/KrisGoorhuis/the-eddy-copy"
                liveSite="https://krisg-theeddy-practicecopy.herokuapp.com/"
             />
             <IndividualProject
+               title="Minesweeper"
+               className="individual_project_container"
+               description="C# and Windows Presentation Foundation. Perhaps desktop applications are in the further future. Unity is more conducive to game dev than WPF."
+               imageLarge={minesweeper}
+               imageSmall={minesweeperSmall}
+               githubLink="https://github.com/KrisGoorhuis/WPF-Minesweeper"
+               liveSite=""
+               
+            />
+            <IndividualProject
                title="Snake Game"
                className="individual_project_container"
-               description="An early passion project - a recreation of the 
-                  classic snake game. Includes selectable stages, score counter, 
-                  and, most importantly, your character is patterned after a coral 
-                  snake."
+               description="An early javascript passion project - a recreation of the classic snake game. Includes selectable stages, score counter, and, most importantly, your character is patterned after a coral snake."
                imageLarge={snakeGame}
                imageSmall={snakeGameSmall}
                githubLink="https://github.com/KrisGoorhuis/snake-game"

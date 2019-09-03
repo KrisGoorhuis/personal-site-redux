@@ -114,6 +114,8 @@
    .right_head {
       margin: 10px;
       margin-top: 50px;
+      margin: auto;
+      width: 90%;
    }
    .right_toggle_scene {
       font-size: 12px;

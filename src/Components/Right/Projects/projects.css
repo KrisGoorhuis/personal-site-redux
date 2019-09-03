@@ -24,7 +24,7 @@
 .individual_project_container {
    /* overflow: hidden; */
    max-width: 500px;
-   height: 600px;
+   /* height: 600px; */
    width: 100%;
    background: var(--green-green);
    margin: auto;
@@ -35,12 +35,19 @@
 }
 
 .links_container {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.links_container_left {
    margin: 30px;
    box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, .1);
    padding: 7px;
    line-height: 0px;
    border-radius: 999px;
-   display: inline-block;
+   display: flex;
+   align-items: center;
 }
 
 .bottom_container {

@@ -20,8 +20,7 @@
 }
 
 .more_bottom div {
-    margin: 7px 20px 0px 0px;
-
+    margin: 0px 20px 0px 0px;
 }
 
 .more_bottom ul {
@@ -37,4 +36,17 @@
 .more_bottom a {
     /* text-decoration: none; */
     color: var(--red);
+}
+
+@media only screen and (max-width: 900px) {
+    .details_body {
+        font-size: 15px;
+    }
+
+    .more_bottom ul {
+        padding-left: 0px;
+    }
+    .site_container {
+        margin-top: 30px;
+    }
 }

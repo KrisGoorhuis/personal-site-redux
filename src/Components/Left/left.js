@@ -3,8 +3,8 @@ import { CSSTransitionGroup } from 'react-transition-group'
 import './left.css'
 
 import Splash from 'Components/Left/Splash/splash.js'
-import More from 'Components/Left/More/more.js'
-import About from 'Components/Left/About/about.js'
+import Site from 'Components/Left/Site/site.js'
+import Me from 'Components/Left/Me/me.js'
 
 let Left = () => {
    const [page, setPage] = useState(1)
@@ -41,6 +41,7 @@ let Left = () => {
             {
                page === 1 ? 
                <CSSTransitionGroup
+                  className="transition_group"
                   transitionName="leftFade"
                   transitionAppear={true}
                   transitionAppearTimeout={300}
@@ -54,29 +55,32 @@ let Left = () => {
             {
                page === 2 ? 
                <CSSTransitionGroup
+                  className="transition_group"
                   transitionName="leftFade"
                   transitionAppear={true}
                   transitionAppearTimeout={300}
                   transitionEnterTimeout={300}
                   transitionLeaveTimeout={300}
                >
-                  <About />
+                  <Me />
                </CSSTransitionGroup> 
                : null
             }
             {
                page === 3 ? 
                <CSSTransitionGroup
+                  className="transition_group"
                   transitionName="leftFade"
                   transitionAppear={true}
                   transitionAppearTimeout={300}
                   transitionEnterTimeout={300}
                   transitionLeaveTimeout={300}
                >
-                  <More /> 
+                  <Site /> 
                </CSSTransitionGroup>
                : null
             }
+            {/* <div className="bottom_bar"></div> */}
          </div>
          <div className="carousel_controls">
             <div
