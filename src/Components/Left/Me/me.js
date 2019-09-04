@@ -22,6 +22,13 @@ let Me = () => {
             Sprinkle in some automated testing and a recently concluded web development
             internship, and I’m eager to begin this new career in earnest.
          </div>
+         {/* <div className="me_segment">
+            I've since been learning by doing, chewing through technologies 
+            from Javascript web frameworks to Python machine learning tools to databases
+            structuring and querying - even game development with C# and Unity. 
+            Sprinkle in some automated testing and a recently concluded web development
+            internship, and I’m eager to begin this new career in earnest.
+         </div> */}
 
          <div className="me_footer">
             Hopefully you're enjoying the practical half of my resume.
