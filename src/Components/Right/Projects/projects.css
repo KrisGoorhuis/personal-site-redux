@@ -1,4 +1,9 @@
 
+
+.scroll_top :hover {
+   cursor: pointer;
+}
+
 .fullscreen_image {
    position: fixed;
    width: 100%;

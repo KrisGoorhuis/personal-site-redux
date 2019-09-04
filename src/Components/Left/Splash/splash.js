@@ -24,13 +24,13 @@ let Splash = () => {
                />
             </div>
             <div className="intro_container">
-               <p>Hey there,</p>
+               <p>Hello,</p>
                <p>I’m Kris G.</p>
             </div>
          </div>
          <p>
             I’m a programmer, snowboarder,
-            hobbyist photographer & mediocre cook
+            hobbyist photographer & okay cook
             living out of the pacific northwest.
          </p>
          <p>I’d love to

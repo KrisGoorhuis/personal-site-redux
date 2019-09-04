@@ -4,11 +4,31 @@ import './right.css'
 import Projects from 'Components/Right/Projects/projects.js'
 import Photography from 'Components/Right/Photography/photography.js'
 
+import upArrow from 'Assets/Images/up-arrow.svg'
+
+document.onscroll = () => {
+   let scrollButton = document.querySelector(".scroll_top")
+   
+   if (document.scrollingElement.scrollTop > 100) {
+      scrollButton.style.display = "block"
+   }
+   else {
+      scrollButton.style.display = "none"
+   }
+}
+
+let scrollToTop = () => {
+   document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // 
+}
+
 let Right = () => {
    let [page, setPage] = useState(0)
 
    return (
       <div className="right_container">
+         <div onClick={ () => scrollToTop() } className="scroll_top"> { upArrow } </div>
+
          <div className="right_head">
             <div className="right_toggle_scene">
                <div className={ page === 0 ? 

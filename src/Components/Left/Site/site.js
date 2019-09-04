@@ -21,10 +21,10 @@ let Site = () => {
                   Thanks for coming by!
                </div> 
                <div className="details_body">
-                  Naturally, this website is meant to be a demonstration of my web development abilities, if not a bit of design. I hope you like it. 
+                  Of course, as an aspirant, this website is meant to be a demonstration of my web dev abilities. If not a bit of design. I hope you like it. 
                   <br></br>
                   <br></br>
-                  Previous efforts brought a kitchen-sink approach, but this one is more pared down but doing it well.
+                  Previous efforts brought a kitchen-sink approach. This one is about paring down but doing it well.
                   
                   {/* It sports automatic compiling and deployment via Babel and Webpack as packaged with the create-react-app. */}
 
@@ -36,7 +36,7 @@ let Site = () => {
                </div>                */}
             </div>
          </div>
-         <div className="more_bottom">
+         <div className="site_bottom">
             <div>
                Some credits
                <ul>

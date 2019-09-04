@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './projects.css'
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 import beerBrowser from 'Assets/Images/beer-browser.png'
 import beerBrowserSmall from 'Assets/Images/beer-browser-small.jpg'
@@ -26,7 +26,7 @@ let IndividualProject = (props) => {
 
    return (
       <React.Fragment>
-         <div 
+         <div
             data-aos="fade-left"
             data-aos-offset="200"
             data-aos-duration="500"
@@ -37,29 +37,29 @@ let IndividualProject = (props) => {
          >
             <div className="links_container">
                <div className="links_container_left">
-                  {props.githubLink ? 
-                     <a target="_blank" rel="noopener noreferrer" 
-                        href={props.githubLink} 
-                     > 
-                        <img 
-                           className="github_link" 
-                           src={githubMark} 
+                  {props.githubLink ?
+                     <a target="_blank" rel="noopener noreferrer"
+                        href={props.githubLink}
+                     >
+                        <img
+                           className="github_link"
+                           src={githubMark}
                            alt="github 'mark' logo"
                         />
-                     </a> 
+                     </a>
                      :
                      <div>&nbsp;--&nbsp;</div>
                   }
-                  {props.liveSite ? 
+                  {props.liveSite ?
                      <a target="_blank" rel="noopener noreferrer"
-                        href={props.liveSite} 
-                     > 
-                        <img 
-                           className="outside_link" 
-                           src={newWindowIcon} 
+                        href={props.liveSite}
+                     >
+                        <img
+                           className="outside_link"
+                           src={newWindowIcon}
                            alt="outside link"
                         />
-                     </a> 
+                     </a>
                      :
                      <div>--&nbsp;</div>
                   }
@@ -67,10 +67,10 @@ let IndividualProject = (props) => {
                {/* <div>up</div> */}
             </div>
             <div className="project_images">
-               <img 
-                  style={largeLoaded ? {display: 'none'} : {}}
+               <img
+                  style={largeLoaded ? { display: 'none' } : {}}
                   className="image_small"
-                  src={props.imageSmall} 
+                  src={props.imageSmall}
                   alt="Temporary tiny placeholder"
                />
                <a href={props.liveSite} target="_blank" rel="noopener noreferrer">
@@ -93,11 +93,13 @@ let IndividualProject = (props) => {
 }
 
 
+
 let Projects = (props) => {
    AOS.init();
 
    return (
       <React.Fragment>
+
          {/* <div className="projects_head">
             Personal projects live on sleepy servers. <br></br>
             Please give them time to wake up if you want to visit.
@@ -111,7 +113,7 @@ let Projects = (props) => {
                imageSmall={chatAppSmall}
                githubLink="https://github.com/KrisGoorhuis/chat-app"
                liveSite="https://krisg-chat-app.herokuapp.com/"
-               
+
             />
             <IndividualProject
                title="Beer Style Guide"
@@ -122,12 +124,12 @@ let Projects = (props) => {
                githubLink="https://github.com/KrisGoorhuis/beer-browser"
                liveSite="https://beer-style-guide.herokuapp.com/"
             />
-            <IndividualProject 
+            <IndividualProject
                title="Secret Unity Things"
                className="individual_project_container"
                description="Why my public GitHub repos are relatively stale. This private one is where I've been playing with C# and the Unity engine when time allows."
                imageLarge={unityGame}
-               imageSmall={unityGameSmall}             
+               imageSmall={unityGameSmall}
             />
             <IndividualProject
                title="Temperature Data Visualization"
@@ -138,7 +140,7 @@ let Projects = (props) => {
                githubLink="https://github.com/KrisGoorhuis/data-visualization-temperature"
                liveSite="https://krisg-data-visualization-temp.herokuapp.com/"
             />
-            
+
             <IndividualProject
                title="Copy of The Eddy's old site"
                className="individual_project_container"
@@ -156,7 +158,7 @@ let Projects = (props) => {
                imageSmall={minesweeperSmall}
                githubLink="https://github.com/KrisGoorhuis/WPF-Minesweeper"
                liveSite=""
-               
+
             />
             <IndividualProject
                title="Snake Game"

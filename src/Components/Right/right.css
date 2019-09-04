@@ -3,7 +3,27 @@
    width: 100%;
 }
 
+.scroll_top {
+   position: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   bottom: 40px;
+   right: 40px;
+   height: 40px;
+   width: 40px;
+   background: rgba(0, 0, 0, .2);
+   color: white;
+   border-radius: 999px;
+}
+
 .right_head {
+   /* position: fixed;
+   z-index: 5;
+   width: 100%;
+   left: 0px;
+   top: 10px;
+   opacity: .9; */
    display: flex;
    align-items: center;
    max-width: 500px;
