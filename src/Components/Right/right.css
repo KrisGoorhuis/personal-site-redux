@@ -9,12 +9,24 @@
    justify-content: center;
    align-items: center;
    bottom: 40px;
-   right: 40px;
+   /* right: 40px; */
    height: 40px;
    width: 40px;
-   background: rgba(0, 0, 0, .2);
+   background: var(--purple);
    color: white;
    border-radius: 999px;
+   z-index: 5;
+   /* opacity governed by croll distance in .js */
+   opacity: 0;
+   transition: .5s;
+   
+}
+
+button:focus {outline:0;}
+
+.scroll_top :hover {
+   color: var(--purple);
+   cursor: pointer;
 }
 
 .right_head {
@@ -110,7 +122,6 @@
    justify-content: center;
    align-items: center;
    line-height: 0px;
-
 }
 
 .noselect {
