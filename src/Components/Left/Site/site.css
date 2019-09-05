@@ -19,7 +19,7 @@
     display: flex;
 }
 
-.site_bottom div {
+.site_bottom > :first-child {
     margin: 0px 30px 0px 0px;
 }
 
