@@ -4,7 +4,7 @@ import './right.css'
 import Projects from 'Components/Right/Projects/projects.js'
 import Photography from 'Components/Right/Photography/photography.js'
 
-import arrow from 'Assets/Images/left_arrow.svg'
+import arrow from 'Assets/Images/up_arrow.svg'
 
 document.onscroll = () => {
    let scrollButton = document.querySelector(".scroll_top")
