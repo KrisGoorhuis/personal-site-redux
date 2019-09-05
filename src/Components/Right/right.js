@@ -4,7 +4,7 @@ import './right.css'
 import Projects from 'Components/Right/Projects/projects.js'
 import Photography from 'Components/Right/Photography/photography.js'
 
-import upArrow from 'Assets/Images/up-arrow.svg'
+import arrow from 'Assets/Images/left_arrow.svg'
 
 document.onscroll = () => {
    let scrollButton = document.querySelector(".scroll_top")
@@ -27,7 +27,7 @@ let Right = () => {
 
    return (
       <div className="right_container">
-         <div onClick={ () => scrollToTop() } className="scroll_top"> { upArrow } </div>
+         <div onClick={ () => scrollToTop() } className="scroll_top"> { arrow } </div>
 
          <div className="right_head">
             <div className="right_toggle_scene">
