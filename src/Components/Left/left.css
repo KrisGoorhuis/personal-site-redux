@@ -94,7 +94,7 @@
    }
 
    /* Keep the  same as .carousel_button border width */
-   .carousel_control :nth-child(1){
+   .carousel_control {
       margin-right: -3px;
    }
 
@@ -106,7 +106,7 @@
       position: relative;
       margin: auto;
       height: 500px;
-      margin-bottom: 100px;
+      margin-bottom: 50px;
       margin-top: 30px;
       padding: 0px;
    }

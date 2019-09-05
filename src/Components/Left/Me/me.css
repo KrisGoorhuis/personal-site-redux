@@ -60,10 +60,10 @@
 }
 
 @media only screen and (max-width: 900px) {
-    .me_placeholder {
+    /* .me_placeholder {
         display: inline-block;
     }
     .me_segment {
         display: none;
-    }
+    } */
 }

@@ -16,7 +16,7 @@
    color: white;
    border-radius: 999px;
    z-index: 5;
-   /* opacity governed by croll distance in .js */
+   /* opacity governed by scroll distance in .js - scrollTop() */
    opacity: 0;
    transition: .5s;
    
