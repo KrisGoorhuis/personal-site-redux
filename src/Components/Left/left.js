@@ -6,6 +6,8 @@ import Splash from 'Components/Left/Splash/splash.js'
 import Site from 'Components/Left/Site/site.js'
 import Me from 'Components/Left/Me/me.js'
 
+import upArrow from 'Assets/Images/up_arrow_purple.svg'
+
 let Left = () => {
    const [page, setPage] = useState(1)
 
@@ -87,13 +89,15 @@ let Left = () => {
                className="carousel_button noselect"
                onClick={() => handlePageSet(-1)}
             >
-               <p>⮜</p> {buttonText[page - 1]}
+               <img src={upArrow} style={{transform: "rotate(-90deg)"}} />
+               {buttonText[page - 1]}
             </div>
             <div
                className="carousel_button noselect"
                onClick={() => handlePageSet(1)}
             >
-               {buttonText[page + 1]} <p>⮞</p>
+               {buttonText[page + 1]} 
+               <img src={upArrow} style={{transform: "rotate(90deg)"}} />
             </div>
          </div>
       </div>

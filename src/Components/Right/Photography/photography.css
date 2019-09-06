@@ -47,7 +47,7 @@
 .photo_carousel_control_left {
     height: 30%;
     position: relative;
-    color: var(--purple);
+    fill: var(--purple);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,13 +61,14 @@
 .photo_carousel_control_left:hover {
     cursor: pointer;
     color: var(--white);
+    fill:red;
     /* font-size: 26px; */
 }
 
 .photo_carousel_control_right {
     height: 30%;
     position: relative;
-    color: var(--purple);
+    fill: var(--purple);
     display: flex;
     justify-content: center;
     align-items: center;
