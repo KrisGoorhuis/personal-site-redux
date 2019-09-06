@@ -12,13 +12,14 @@ let Me = () => {
             </div>              
             <div className="me_placeholder"></div>
             <div className="me_segment">
-               The instant I finished my first little word-reversing script I knew how right they were. I've since been learning by doing, chewing through technologies from from C#/Unity game dev to Python machine learning before returning home to web development.
+               The instant I finished my first little word-reversing script I knew how right they were. I've since been learning by doing, chewing through technologies from C#/Unity game dev to Python machine learning before returning home to web development.
+               <br></br>
+               <br></br>
+               Now it's time to begin the career in earnest.
             </div>   
          </div>
          <div className="me_footer">
-            Hopefully you're enjoying the practical half of my resume.
-            <br></br> 
-            If you'd like to check out the theory half, &nbsp; 
+            If you're enjoying the practical half of my resume and wand to see the theory half, &nbsp; 
             <a 
             href={testRes} 
             target="_blank" 

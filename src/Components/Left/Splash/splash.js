@@ -28,17 +28,20 @@ let Splash = () => {
                <p>I’m Kris G.</p>
             </div>
          </div>
-         <p>
-            I’m a programmer, snowboarder,
-            hobbyist photographer & okay cook
-            living out of the pacific northwest.
-         </p>
-         <p>I’d love to
-            <a 
-               className="redtext" 
-               href="mailto:krisgoorhuis@gmail.com">
-               &nbsp; hear from you.
-            </a></p>
+         <div className="intro_body">
+            <p>
+               I’m a programmer, snowboarder,
+               hobbyist photographer & okay cook
+               living out of the pacific northwest.
+            </p>
+            <p>I’d love to
+               <a 
+                  className="redtext" 
+                  href="mailto:krisgoorhuis@gmail.com">
+                  &nbsp; hear from you.
+               </a>
+            </p>
+         </div>
       </div>
    )
 }

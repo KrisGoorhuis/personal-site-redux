@@ -113,7 +113,6 @@ let Projects = (props) => {
                imageSmall={chatAppSmall}
                githubLink="https://github.com/KrisGoorhuis/chat-app"
                liveSite="https://krisg-chat-app.herokuapp.com/"
-
             />
             <IndividualProject
                title="Beer Style Guide"
