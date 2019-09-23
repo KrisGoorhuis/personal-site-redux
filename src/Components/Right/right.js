@@ -30,18 +30,20 @@ let Right = (props) => {
       props.dispatch({type: type})
    }
 
+   console.log(props)
+   
    return (
       <div className="right_container">
          <button 
             onClick={ () => scrollToTop() } 
             className="scroll_top noselect"
-         > 
+         >  
             ⮝ 
          </button>
 
          <div className="right_head">
             <div className="right_toggle_scene">
-               <div className={ page === 0 ? 
+               <div className={ props.right === "projects" ? 
                   "right_toggle_card" : 
                   "right_toggle_card is_flipped"}
                >
@@ -60,7 +62,7 @@ let Right = (props) => {
                </div>
             </div>
             <div className="right_head_text">
-               {page === 0 ? 
+               {props.right === "projects" ? 
                   <div> 
                      Projects live on sleepy servers. <br></br>
                      Please give them time to wake up if you want to visit.
@@ -74,7 +76,7 @@ let Right = (props) => {
             </div>
          </div>
          {
-            page === 0 ?
+            props.right === "projects" ?
                <Projects /> :
                <Photography />
          }
@@ -82,9 +84,9 @@ let Right = (props) => {
    )
 }
 
-let mapStateToProps = (state ) => {
+let mapStateToProps = (state) => {
    return {
-      rightPage: state.rightPage
+      right: state.right
    }
 }
 

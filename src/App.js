@@ -10,26 +10,45 @@ import Right from './Components/Right/right.js'
 let initialState = { page: 1, right: "projects" } 
 
 let reducer = (state = initialState, action) => {
-   console.log(state.page)
+   console.log(state)
    console.log(action)
+
    switch (action.type) {
       case ("INCREMENT"): 
          if (state.page >= 3) {
-            return { page: 1 }
+            return { 
+               ...state,
+               page: 1 
+            }
          }
-         return { page: state.page + 1 }
+         return { 
+            ...state,
+            page: state.page + 1 
+         }
    
       case ("DECREMENT"):
          if (state.page <= 1) {
-            return { page: 3 }
+            return { 
+               ...state,
+               page: 3 
+            }
          }
-         return { page: state.page - 1}
+         return { 
+            ...state,
+            page: state.page - 1
+         }
 
       case ("FLIP_TO_PHOTOS"):
-         return { right: 0 }
+         return { 
+            ...state, 
+            right: "photos" 
+         }
 
       case ("FLIP_TO_PROJECTS"):
-         return { right: 1 }
+         return { 
+            ...state,
+            right: "projects"
+         }
    
       default:
          return state
