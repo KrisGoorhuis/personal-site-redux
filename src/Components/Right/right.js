@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './right.css'
+import { connect } from 'react-redux'
 
 import Projects from 'Components/Right/Projects/projects.js'
 import Photography from 'Components/Right/Photography/photography.js'
@@ -19,11 +20,15 @@ document.onscroll = () => {
 
 let scrollToTop = () => {
    document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // 
+   document.documentElement.scrollTop = 0; // 
 }
 
-let Right = () => {
+let Right = (props) => {
    let [page, setPage] = useState(0)
+
+   let flip = (type) => {
+      props.dispatch({type: type})
+   }
 
    return (
       <div className="right_container">
@@ -42,13 +47,13 @@ let Right = () => {
                >
                   <div
                      className="toggle_projects_face noselect"
-                     onClick={() => setPage(1)}
+                     onClick={() => flip("FLIP_TO_PHOTOS")}
                   >
                      View Photography
                   </div>
                   <div
                      className="toggle_photography_face noselect"
-                     onClick={() => setPage(0)}
+                     onClick={() => flip("FLIP_TO_PROJECTS")}
                   >
                      View Projects
                   </div>
@@ -77,4 +82,10 @@ let Right = () => {
    )
 }
 
-export default Right
+let mapStateToProps = (state ) => {
+   return {
+      rightPage: state.rightPage
+   }
+}
+
+export default connect(mapStateToProps)(Right)

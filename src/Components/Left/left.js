@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { CSSTransitionGroup } from 'react-transition-group'
 import './left.css'
+import { connect } from 'react-redux'
 
 import Splash from 'Components/Left/Splash/splash.js'
 import Site from 'Components/Left/Site/site.js'
@@ -8,8 +9,22 @@ import Me from 'Components/Left/Me/me.js'
 
 import upArrow from 'Assets/Images/up_arrow_purple.svg'
 
-let Left = () => {
+
+
+
+
+let Left = (props) => {
    const [page, setPage] = useState(1)
+
+   let increment = () => {
+      console.log("Incrementing from here")
+      props.dispatch({ type: "INCREMENT"})
+   }
+
+   let decrement = () => {
+      props.dispatch( {type: "DECREMENT"} )
+   }
+
 
    // Lets us scroll in circles instead of a line.
    let handlePageSet = (change) => {
@@ -41,7 +56,7 @@ let Left = () => {
 
          <div className="page_container">
             {
-               page === 1 ? 
+               props.page === 1 ? 
                <CSSTransitionGroup
                   className="transition_group"
                   transitionName="leftFade"
@@ -55,7 +70,7 @@ let Left = () => {
                : null
             }
             {
-               page === 2 ? 
+               props.page === 2 ? 
                <CSSTransitionGroup
                   className="transition_group"
                   transitionName="leftFade"
@@ -69,7 +84,7 @@ let Left = () => {
                : null
             }
             {
-               page === 3 ? 
+               props.page === 3 ? 
                <CSSTransitionGroup
                   className="transition_group"
                   transitionName="leftFade"
@@ -87,20 +102,27 @@ let Left = () => {
          <div className="carousel_controls">
             <div
                className="carousel_button noselect"
-               onClick={() => handlePageSet(-1)}
+               onClick={() => decrement()}
             >
                <img src={upArrow} style={{transform: "rotate(-90deg)"}} />
-               {buttonText[page - 1]}
+               {buttonText[props.page - 1]}
             </div>
             <div
                className="carousel_button noselect"
-               onClick={() => handlePageSet(1)}
+               onClick={() => increment()}
             >
-               {buttonText[page + 1]} 
+               {buttonText[props.page + 1]} 
                <img src={upArrow} style={{transform: "rotate(90deg)"}} />
             </div>
          </div>
       </div>
    )
 }
-export default Left
+
+let mapStateToProps = (state) => {
+   return {
+      page: state.page
+   }
+}
+
+export default connect(mapStateToProps)(Left)
